@@ -1,5 +1,5 @@
 
-package com.WebApp.RequestAntibiotik.Service;
+package com.WebApp.RequestAntibiotik.Service.UserApp;
 
 
 import com.WebApp.RequestAntibiotik.Entity.UserApp;
@@ -26,7 +26,7 @@ public class UserServiceImpl implements UserService  {
 	@Override
 	public UserApp saveUser(UserApp user) {
 
-		String password=passwordEncoder.encode(user.getPassword());
+		String password = passwordEncoder.encode(user.getPassword());
 		user.setPassword(password);
 		user.setRole("ROLE_USER");
 		UserApp newuser = userRepo.save(user);

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+    xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Registration</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" th:href="@{/plugins/fontawesome-free/css/all.min.css}">
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/dist/css/adminlte.min.css}">
+</head>
+<body>
+  <br/>
+  <div class="row">
+      <div class="col-md-2">&nbsp;</div>
+      <div class="col-md-8">    
+            <div class="card card-primary">
+              <div class="card-header">
+                <h3 class="card-title">User Registration</h3>
+              </div>
+              <!-- /.card-header -->
+
+              <!-- form start -->
+              <form method="POST" action="/user/processRegistration">
+
+                <div class="card-body">
+                 
+                  <div class="form-group">
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" name="inputEmail" autofocus="autofocus" placeholder="Enter email">
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
+                  </div>
+                 
+                  <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                  </div>
+
+                   <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="role">Role</label>
+                    <select name="role" id="role" class="form-control" style="width:250px">
+                      <option value="DOKTER"><b>DOKTER</b></option>
+                      <option value="PPRA"><b>PPRA</b></option>
+                      <option value="FARMASI"><b>FARMASI</b></option>
+                    </select>
+                  </div>
+ 
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+    </div>
+    <div class="col-md-2">&nbsp;</div>
+</div>
+
+<!-- jQuery -->
+<script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+<!-- Bootstrap 4 -->
+<script th:src="@{/plugins/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<!-- AdminLTE App -->
+<script th:src="@{/dist/js/adminlte.min.js}"></script>
+
+
+</body>
+</html>

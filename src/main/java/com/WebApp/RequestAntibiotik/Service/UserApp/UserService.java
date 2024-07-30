@@ -1,5 +1,5 @@
 
-package com.WebApp.RequestAntibiotik.Service;
+package com.WebApp.RequestAntibiotik.Service.UserApp;
 
 import com.WebApp.RequestAntibiotik.Entity.UserApp;
 
